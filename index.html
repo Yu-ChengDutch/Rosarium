@@ -1,0 +1,377 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <H1>The Holy Rosary</H1>
+
+        <div class="menu">
+
+            <h2>Opening prayers</h2>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="opening_cross" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Sign of the cross</p>
+            </div>
+            
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="opening_creed" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Apostles' Creed</p>
+            </div>
+            
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="opening_father" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Our Father</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="opening_mary" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Trinitarian "Hail Mary"</p>
+            </div> 
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="opening_lips" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>O Lord, open my lips</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="opening_glory" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Glory Be</p>
+            </div>            
+
+            <h2>Mysteries</h2>
+
+            <div id="mystery-text"></div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="scripture_excerpt" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Excerpts from scripture</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="prayer_father" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Our Father</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="prayer_glory" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Glory Be</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="prayer_fatima" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>Fatima prayer</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="prayer_sacrament" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>O Sacrament Most Holy</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="prayer_medal" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>Miraculous Medal Prayer</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="prayer_dead" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>Prayer for the dead</p>
+            </div>
+
+            <h2>Closing prayers</h2>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="closing_queen" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Hail, Holy Queen</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="closing_michael" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>Prayer to Saint Michael</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="closing_protection" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>Beneath Thy Protection</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="closing_litany" onclick="check_boxes()">
+                <span class="slider round"></span>
+            </label>
+            <p>Litany of Loreto</p>
+            </div>
+
+            <div class="switch-module">
+            <label class="switch">
+                <input type="checkbox" id="closing_cross" onclick="check_boxes()" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Sign of the cross</p>
+            </div>           
+
+        </div>
+
+        <div class="card" id="opening">
+
+            <H2>Opening prayers</H2>
+
+            <p id="prayer_opening_cross"></p>
+
+            <p id="prayer_opening_creed"></p>
+
+            <p id="prayer_opening_father"></p>
+
+            <p class="prayer_mary" id="mary_1"></p>
+
+            <p class="prayer_mary" id="mary_2"></p>
+
+            <p class="prayer_mary" id="mary_3"></p>
+
+            <p id="prayer_opening_lips"></p>
+
+            <p id="prayer_opening_glory"></p>
+
+        </div>
+
+        <div class="card mysteries" id="mystery-1">
+
+            <H2 id="mystery-1-title"></H2>
+
+            <p id="scripture-1"></p>
+
+            <p class="prayer_father"></p>
+
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>   
+            
+            
+
+            <p class="prayer_fatima"></p>
+
+            <p class="prayer_sacrament"></p>
+
+            <p class="prayer_medal"></p>
+
+            <p class="prayer_dead"></p>
+
+            <p class="prayer_glory"></p>
+
+        </div>
+
+        <div class="card mysteries" id="mystery-2">
+
+            <H2 id="mystery-2-title"></H2>
+
+            <p id="scripture-2"></p>
+
+            <p class="prayer_father"></p>
+
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>   
+            
+            
+
+            <p class="prayer_fatima"></p>
+
+            <p class="prayer_sacrament"></p>
+
+            <p class="prayer_medal"></p>
+
+            <p class="prayer_dead"></p>
+
+            <p class="prayer_glory"></p>
+
+        </div>
+
+        <div class="card mysteries" id="mystery-3">
+
+            <H2 id="mystery-3-title"></H2>
+
+            <p id="scripture-3"></p>
+
+            <p class="prayer_father"></p>
+
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>   
+            
+            
+
+            <p class="prayer_fatima"></p>
+
+            <p class="prayer_sacrament"></p>
+
+            <p class="prayer_medal"></p>
+
+            <p class="prayer_dead"></p>
+
+            <p class="prayer_glory"></p>
+
+        </div>
+
+        <div class="card mysteries" id="mystery-4">
+
+            <H2 id="mystery-4-title"></H2>
+
+            <p id="scripture-4"></p>
+
+            <p class="prayer_father"></p>
+
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>   
+            
+            
+
+            <p class="prayer_fatima"></p>
+
+            <p class="prayer_sacrament"></p>
+
+            <p class="prayer_medal"></p>
+
+            <p class="prayer_dead"></p>
+
+            <p class="prayer_glory"></p>
+
+        </div>
+
+        <div class="card mysteries" id="mystery-5">
+
+            <H2 id="mystery-5-title"></H2>
+
+            <p id="scripture-5"></p>
+
+            <p class="prayer_father"></p>
+
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>
+            <p class="prayer_mary"></p>   
+            
+            
+
+            <p class="prayer_fatima"></p>
+
+            <p class="prayer_sacrament"></p>
+
+            <p class="prayer_medal"></p>
+
+            <p class="prayer_dead"></p>
+
+            <p class="prayer_glory"></p>
+
+        </div>
+
+        <div class="card" id="closing">
+
+            <H2>Closing prayers</H2>
+
+            <p id="prayer_closing_queen"></p>
+
+            <p id="prayer_closing_michael"></p>
+
+            <p id="prayer_closing_protection"></p>
+
+            <p id="prayer_closing_litany"></p>
+
+            <p id="prayer_closing_cross"></p>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>    
+</html>
