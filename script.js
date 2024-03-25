@@ -1,4 +1,4 @@
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const mysteries_trad = ["Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Sorrowful mysteries", "Glorious mysteries", "Glorious mysteries"];
 const mysteries_mod = ["Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Luminous mysteries", "Sorrowful mysteries", "Joyful mysteries", "Glorious mysteries"];
 
