@@ -1,6 +1,6 @@
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const mysteries_trad = ["Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Sorrowful mysteries", "Glorious mysteries", "Glorious mysteries"];
-const mysteries_mod = ["Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Luminous mysteries", "Sorrowful mysteries", "Joyful mysteries", "Glorious mysteries"];
+const mysteries_mod = ["Glorious mysteries", "Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Luminous mysteries", "Sorrowful mysteries", "Joyful mysteries"];
 
 const mysteries_titles = {
     "Joyful mysteries": ["The Annunciation of the Lord to Mary", "The Visitation of Mary to Elizabeth", "The Nativity of our Lord Jesus Christ", "The Presentation of our Lord", "Finding Jesus in the Temple at age 12"],
