@@ -69,6 +69,21 @@ p {
 
 /* Switches settings */
 
+.radio_class {  
+    font-family: monospace;
+    font-size: 2.5vw;
+    font-weight: 500;
+}
+
+.radio_button {
+    position: absolute;
+    left: 30vw;
+    width: 60px;
+    padding: 1vh;
+    height: 30px;
+    float: left;
+}
+
 .switch {
     position: absolute;
     display: inline;

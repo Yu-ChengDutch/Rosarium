@@ -52,6 +52,25 @@ const prayers_english = {
     "That we may be made worthy of the promises of Christ.", "", "Let us pray", "Grant, we beseech thee", "O Lord God,", "that we, your servants,", "may enjoy perpetual health of mind and body;", "and by the glorious intercession of the Blessed Mary, every Virgin,", "may be delivered from present sorrow,", "and obtain eternal joy.", "Through Christ our Lord. Amen."]
 };
 
+const prayers_latin = {
+    "Our Father": ["Pater noster, qui es in caelis,", "sanctificetur nomen tuum.", "Adveniat regnum tuum.", "Fiat voluntas tua,", "sicut in caelo, et in terra.", "Panem nostrum quotidianum da nobis hodie,", "et dimitte nobis debita nostra,", "sicut et nos dimittimus debitoribus nostris.", "Et ne nos inducas in tentaionem,", "sed libera nos a malo.", "Amen."],
+    "Hail Mary": ["Ave Maria, gratia plena;", "Dominus tecum.", "Benedicta tu in mulieribus,", "et benedictus fructus ventris tui, Iesus.", "Sancta Maria, Mater Dei,", "ora pro nobis peccatoribus,", "nunc et in hora mortis nostrae.", "Amen."],
+    "Glory Be": ["Gloria Patri, et Filio, et Spiritui Sancto,", "Sicut erat in principio, et nunc, et semper,", "et in saecula saeculorum.", "Amen."],
+    "The Apostle's Creed": ["Credo in Deum Patrem omnipotentem,", "Creatorem caeli et terrae.", "Et in Iesum Christum,", "Filium eius unicum, Dominum nostrum,", "qui conceptus est de Spiritu Sancto,", "natus ex Maria Virgine,", "passus sub Pontio Pilato,", "crucifixus, mortuus, et sepultus,", "descendit ad inferos, tertia die resurrexit a mortuis,", "ascendit ad caelos,", "sedet ad dexteram Dei Patris omnipotentis,", "inde venturus est iudicare vivos et mortuos.", "Credo in Spiritum Sanctum,", "sanctam Ecclesiam catholicam,", "sanctorum communionem,", "remissionem peccatorum,", "carnis resurrectionem et vitam aeternam.", "Amen."],
+    "O Lord, Open My Lips": ["O Lord, open my lips.", "And my mouth will proclaim your praise.", "O God come to my aid", "O Lord, make haste to help me."],
+    "Sign of the cross": ["In nomine Patris,", "et Filii", "et Spiritus Sancti.", "Amen."],
+    "Hail, holy Queen": ["Hail, holy Queen, mother of Mercy;", "hail, our life, our sweetness and our hope.", "To thee do we cry, poor banished children of Eve;", "to thee do we send up our sighs,", "mourning and weeping in this valley of tears.", "Turn then, most gracious advocate,", "thine eyes of mercy towards us;", "and after this our exile,", "show unto us the blessed fruit of thy womb, Jesus.", "O clement, O loving, O sweet Virgin Mary. Amen."],
+    "O my Jesus": ["Domine Iesu,", "dimitte nobis débita nostra,", "salva nos ab igne inferni,", "perduc in caelum omnes ánimas,", "praesertim eas, quae misericórdiae tuae maxime indigent.", "Amen."],
+    "Remember, O most Gracious Virgin Mary": ["Remember, O most gracious Virgin Mary", "that never was it known that anyone who fled to your protection,", "implored your help, or sought your intercession", "was left unaided.", "Inspired by this confidence,", "I fly unto thee, O Virgin of virgins, my Mother.", "To thee do I come, before you I stand,", "sinful and sorrowful.", "O Mother of the Word Incarnate,", "despise not my petitions,", "but in your mercy, hear and answer me. Amen."],
+    "Prayer to Saint Michael": ["Sancte Michael Archangele,", "defende nos in proelio, contra nequitiam et insidias diaboli esto praesidium.", "Imperet illi Deus, supplices deprecamur: tuque, principes militae celestis,", "Satanam aliosque spiritus malignos,", "qui ad perditionem animarum pervagantur in mundo,", "divina virtute, in infernum detrude.", "Amen."],
+    "Beneath thy protection": ["We fly to thy protection,", "O Holy Mother of God;", "do not despise our petitions", "in our necessities,", "but deliver us always", "from all dangers,", "O Glorious and Blessed Virgin. Amen."],
+    "Miraculous Medal Prayer": ["O Mary, conceived without sin,", "pray for us who have recourse to thee. Amen."],
+    "O Sacrament Most Holy": ["O sacrament most holy,", "o Sacrament divine,", "all praise and all thanksgiving,", "be every moment thine!"],
+    "Prayer for the dead": ["May the souls of the faithful departed,", "through the mercy of God,", "rest in peace. Amen."],
+    "Litany of Loreto": ["Lord have mercy.", "Christ have mercy.", "Lord have mercy.", "Christ hear us.", "Christ graciously hear us.", "", "God the Father of heaven, have mercy on us", "", "God the Son, Redeemer of the world, have mercy on us", "God the Holy Spirit, have mercy on us", "Holy Trinity, one God, have mercy on us", "", "Holy Mary, pray for us", "Holy Mother of God, pray for us", "Holy Virgin of Virgins, pray for us", "Mother of Christ, pray for us", "Mother of the Church, pray for us", "Mother of Mercy, pray for us", "Mother of divine grace, pray for us", "Mother of Hope, pray for us", "Mother most pure, pray for us", "Mother most chaste, pray for us", "Mother inviolate, pray for us", "Mother undefiled, pray for us", "Mother most amiable, pray for us", "Mother admirable, pray for us", "Mother of good counsel, pray for us", "Mother of our Creator, pray for us", "Mother of our Saviour, pray for us", "Virgin most prudent, pray for us", "Virgin most venerable, pray for us", "Virgin most powerful, pray for us", "Virgin most merciful, pray for us", "Virgin most faithful, pray for us", "Mirror of justice, pray for us", "Seat of wisdom, pray for us", "Cause of our joy, pray for us", "Spiritual vessel, pray for us", "Vessel of honour, pray for us", "Singular vessel of devotion, pray for us", "Mystical rose, pray for us", "Tower of David, pray for us", "Tower of ivory, pray for us", "House of gold, pray for us", "Ark of the covenant, pray for us", "Gate of heaven, pray for us", "Morning star, pray for us", "Health of the sick, pray for us", "Refuge of Migrants, pray for us", "Comfort of the afflicted, pray for us", "Help of Christians, pray for us", "Queen of Angels, pray for us", "Queen of Patriarchs, pray for us", "Queen of Prophets, pray for us", "Queen of Apostles, pray for us", "Queen of Martyrs, pray for us", "Queen of Confessors, pray for us", "Queen of Virgins, pray for us", "Queen of all Saints, pray for us", "Queen conceived without original sin, pray for us", "Queen assumed into heaven, pray for us", "Queen of the most holy Rosary, pray for us", "Queen of families, pray for us", "Queen of peace, pray for us", "", "Lamb of God, who takes away the sins of the world,", "spare us, O Lord", "Lamb of God, who takes away the sins of the world,", "graciously hear us, O Lord.","Lamb of God, who takes away the sins of the world,", "have mercy on us.", "Pray for us, O holy Mother of God.", 
+    "That we may be made worthy of the promises of Christ.", "", "Let us pray", "Grant, we beseech thee", "O Lord God,", "that we, your servants,", "may enjoy perpetual health of mind and body;", "and by the glorious intercession of the Blessed Mary, every Virgin,", "may be delivered from present sorrow,", "and obtain eternal joy.", "Through Christ our Lord. Amen."]
+};
+
 
 var today = new Date();
 var day = today.getDay();
@@ -82,6 +101,23 @@ check_boxes();
 
 function check_boxes() {
 
+    // Setup for radios
+
+    var radios = document.getElementsByClassName('radio_button');
+    var prayers;
+
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].type === 'radio' && radios[i].checked) {
+            value = radios[i].value;       
+
+            if (radios[i].value == "english") {
+                prayers = prayers_english
+            } else if (radios[i].value == "latin") {
+                prayers = prayers_latin
+            }
+        }
+    };
+
     console.log("Starting setting boxes...");
 
     // Opening prayers
@@ -94,7 +130,7 @@ function check_boxes() {
         current_box = document.getElementById(opening_boxes[i])
 
         if (current_box.checked == true) {
-            document.getElementById(`prayer_${opening_boxes[i]}`).innerHTML = `<b>${opening_prayers[i]}</b> <br><br> ${prayers_english[opening_prayers[i]].join("<br>")}`;
+            document.getElementById(`prayer_${opening_boxes[i]}`).innerHTML = `<b>${opening_prayers[i]}</b> <br><br> ${prayers[opening_prayers[i]].join("<br>")}`;
         } else {
             document.getElementById(`prayer_${opening_boxes[i]}`).innerHTML = "";
         };
@@ -113,7 +149,7 @@ function check_boxes() {
         current_box = document.getElementById(closing_boxes[i])
 
         if (current_box.checked == true) {
-            document.getElementById(`prayer_${closing_boxes[i]}`).innerHTML = `<b>${closing_prayers[i]}</b> <br><br> ${prayers_english[closing_prayers[i]].join("<br>")}`;
+            document.getElementById(`prayer_${closing_boxes[i]}`).innerHTML = `<b>${closing_prayers[i]}</b> <br><br> ${prayers[closing_prayers[i]].join("<br>")}`;
         } else {
             document.getElementById(`prayer_${closing_boxes[i]}`).innerHTML = "";
         };
@@ -170,7 +206,7 @@ function check_boxes() {
         if (current_box.checked == true) {            
 
             for (var j=0; j<current_prayers.length; j++) {
-                current_prayers[j].innerHTML = `<b>${main_prayers[i]}</b> <br><br> ${prayers_english[main_prayers[i]].join("<br>")}`;
+                current_prayers[j].innerHTML = `<b>${main_prayers[i]}</b> <br><br> ${prayers[main_prayers[i]].join("<br>")}`;
             };
 
         } else {
