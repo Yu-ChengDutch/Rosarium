@@ -2,6 +2,8 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 const mysteries_trad = ["Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Sorrowful mysteries", "Glorious mysteries", "Glorious mysteries"];
 const mysteries_mod = ["Glorious mysteries", "Joyful mysteries", "Sorrowful mysteries", "Glorious mysteries", "Luminous mysteries", "Sorrowful mysteries", "Joyful mysteries"];
 
+var language = "english";
+
 const mysteries_titles = {
     "Joyful mysteries": ["The Annunciation of the Lord to Mary", "The Visitation of Mary to Elizabeth", "The Nativity of our Lord Jesus Christ", "The Presentation of our Lord", "Finding Jesus in the Temple at age 12"],
     "Sorrowful mysteries": ["The Agony of Jesus in the Garden", "The Scourging at the Pillar", "Jesus is Crowned with Thorns", "Jesus Carried the Cross", "The crucifixion of our Lord"],
@@ -31,6 +33,24 @@ const mysteries_content = {
                         "And after six days Jesus took with him Peter and James and John his brother, and led them up a high mountain apart. And he was transfigured before them, and his face shone like the sun, and his garments became white as light. (Mt 17:1-2)", 
                         "Now as they were eating, Jesus took bread, and blessed, and broke it, and gave it to the disciples and said, 'Take, eat; this is my body'. (Mt 26:26)"]
 
+};
+
+// From Rosary Remnant, I can get additional readings
+
+const additional_readings = {
+
+    "Joyful mysteries": [   "Sing, O daughter of Zion; shout, O Israel; be glad and rejoice with all the heart, O daughter of Jerusalem. The LORD hath taken away thy judgments, he hath cast out thine enemy: the king of Israel, even the LORD, is in the midst of thee: thou shalt not see evil any more. In that day it shall be said to Jerusalem, Fear thou not: and to Zion, Let not thine hands be slack. The LORD thy God in the midst of thee is mighty; he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing. (Zephaniah 3:14-17)", 
+                            "And Hannah prayed, and said, My heart rejoiceth in the LORD, mine horn is exalted in the LORD: my mouth is enlarged over mine enemies; because I rejoice in thy salvation. There is none holy as the LORD: for there is none beside thee: neither is there any rock like our God. Talk no more so exceeding proudly; let not arrogancy come out of your mouth: for the LORD is a God of knowledge, and by him actions are weighed. The bows of the mighty men are broken, and they that stumbled are girded with strength. They that were full have hired out themselves for bread; and they that were hungry ceased: so that the barren hath born seven; and she that hath many children is waxed feeble. The LORD killeth, and maketh alive: he bringeth down to the grave, and bringeth up. The LORD maketh poor, and maketh rich: he bringeth low, and lifteth up. He raiseth up the poor out of the dust, and lifteth up the beggar from the dunghill, to set them among princes, and to make them inherit the throne of glory: for the pillars of the earth are the LORD'S, and he hath set the world upon them. He will keep the feet of his saints, and the wicked shall be silent in darkness; for by strength shall no man prevail. The adversaries of the LORD shall be broken to pieces; out of heaven shall he thunder upon them: the LORD shall judge the ends of the earth; and he shall give strength unto his king, and exalt the horn of his anointed. (1 Samuel 2:1-10)", 
+                            "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem, Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him. When Herod the king had heard these things, he was troubled, and all Jerusalem with him. And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born. And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet, And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel. Then Herod, when he had privily called the wise men, enquired of them diligently what time the star appeared. And he sent them to Bethlehem, and said, Go and search diligently for the young child; and when ye have found him, bring me word again, that I may come and worship him also. When they had heard the king, they departed; and, lo, the star, which they saw in the east, went before them, till it came and stood over where the young child was. When they saw the star, they rejoiced with exceeding great joy. And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him: and when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh. And being warned of God in a dream that they should not return to Herod, they departed into their own country another way. (Matthew 2:1-12)", 
+                            "And they rose up in the morning early, and worshipped before the LORD, and returned, and came to their house to Ramah: and Elkanah knew Hannah his wife; and the LORD remembered her. Wherefore it came to pass, when the time was come about after Hannah had conceived, that she bare a son, and called his name Samuel, saying, Because I have asked him of the LORD. And the man Elkanah, and all his house, went up to offer unto the LORD the yearly sacrifice, and his vow. But Hannah went not up; for she said unto her husband, I will not go up until the child be weaned, and then I will bring him, that he may appear before the LORD, and there abide for ever. And Elkanah her husband said unto her, Do what seemeth thee good; tarry until thou have weaned him; only the LORD establish his word. So the woman abode, and gave her son suck until she weaned him. And when she had weaned him, she took him up with her, with three bullocks, and one ephah of flour, and a bottle of wine, and brought him unto the house of the LORD in Shiloh: and the child was young. And they slew a bullock, and brought the child to Eli. And she said, Oh my lord, as thy soul liveth, my lord, I am the woman that stood by thee here, praying unto the LORD. For this child I prayed; and the LORD hath given me my petition which I asked of him: Therefore also I have lent him to the LORD; as long as he liveth he shall be lent to the LORD. And he worshipped the LORD there. (1 Samuel 1:19-28)", 
+                            "Moreover the LORD spake again unto Ahaz, saying, ask thee a sign of the LORD thy God; ask it either in the depth, or in the height above. But Ahaz said, I will not ask, neither will I tempt the LORD. And he said, Hear ye now, O house of David; Is it a small thing for you to weary men, but will ye weary my God also? Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel. Butter and honey shall he eat, that he may know to refuse the evil, and choose the good. (Isaiah 7:10-15)"],
+    "Sorrowful mysteries": [],
+    "Glorious mysteries": [ "He will swallow up death in victory; and the Lord GOD will wipe away tears from off all faces; and the rebuke of his people shall he take away from off all the earth: for the LORD hath spoken it. And it shall be said in that day, Lo, this is our God; we have waited for him, and he will save us: this is the LORD; we have waited for him, we will be glad and rejoice in his salvation. (Isaiah 25:8-9)", 
+                            "When they therefore were come together, they asked of him, saying, Lord, wilt thou at this time restore again the kingdom to Israel? And he said unto them, It is not for you to know the times or the seasons, which the Father hath put in his own power. But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth. And when he had spoken these things, while they beheld, he was taken up; and a cloud received him out of their sight. And while they looked stedfastly toward heaven as he went up, behold, two men stood by them in white apparel; Which also said, Ye men of Galilee, why stand ye gazing up into heaven? this same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven. (Acts 1:6-11)", 
+                            "Wherefore I give you to understand, that no man speaking by the Spirit of God calleth Jesus accursed: and that no man can say that Jesus is the Lord, but by the Holy Ghost. Now there are diversities of gifts, but the same Spirit. And there are differences of administrations, but the same Lord. And there are diversities of operations, but it is the same God which worketh all in all. But the manifestation of the Spirit is given to every man to profit withal. For to one is given by the Spirit the word of wisdom; to another the word of knowledge by the same Spirit; To another faith by the same Spirit; to another the gifts of healing by the same Spirit; To another the working of miracles; to another prophecy; to another discerning of spirits; to another divers kinds of tongues; to another the interpretation of tongues: But all these worketh that one and the selfsame Spirit, dividing to every man severally as he will. For as the body is one, and hath many members, and all the members of that one body, being many, are one body: so also is Christ. For by one Spirit are we all baptized into one body, whether we be Jews or Gentiles, whether we be bond or free; and have been all made to drink into one Spirit. (1 Corinthians 12:3-13)", 
+                            "Now there stood by the cross of Jesus his mother, and his mother's sister, Mary the wife of Cleophas, and Mary Magdalene. When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman, behold thy son! Then saith he to the disciple, Behold thy mother! And from that hour that disciple took her unto his own home. (John 19:25-27)", 
+                            "When they had heard the king, they departed; and, lo, the star, which they saw in the east, went before them, till it came and stood over where the young child was. When they saw the star, they rejoiced with exceeding great joy. And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him: and when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh. And being warned of God in a dream that they should not return to Herod, they departed into their own country another way. (Matthew 2:9-12)"],
+    "Luminous mysteries": []
 };
 
 const prayers_english = {
@@ -64,7 +84,7 @@ const prayers_latin = {
     "Remember, O most Gracious Virgin Mary": ["Remember, O most gracious Virgin Mary", "that never was it known that anyone who fled to your protection,", "implored your help, or sought your intercession", "was left unaided.", "Inspired by this confidence,", "I fly unto thee, O Virgin of virgins, my Mother.", "To thee do I come, before you I stand,", "sinful and sorrowful.", "O Mother of the Word Incarnate,", "despise not my petitions,", "but in your mercy, hear and answer me. Amen."],
     "Prayer to Saint Michael": ["Sancte Michael Archangele,", "defende nos in proelio, contra nequitiam et insidias diaboli esto praesidium.", "Imperet illi Deus, supplices deprecamur: tuque, principes militae celestis,", "Satanam aliosque spiritus malignos,", "qui ad perditionem animarum pervagantur in mundo,", "divina virtute, in infernum detrude.", "Amen."],
     "Beneath thy protection": ["We fly to thy protection,", "O Holy Mother of God;", "do not despise our petitions", "in our necessities,", "but deliver us always", "from all dangers,", "O Glorious and Blessed Virgin. Amen."],
-    "Miraculous Medal Prayer": ["O Mary, conceived without sin,", "pray for us who have recourse to thee. Amen."],
+    "Miraculous Medal Prayer": ["O Maria sine labe concépta,",  "ora pro nobis, qui confúgimus ad te."],
     "O Sacrament Most Holy": ["O sacrament most holy,", "o Sacrament divine,", "all praise and all thanksgiving,", "be every moment thine!"],
     "Prayer for the dead": ["May the souls of the faithful departed,", "through the mercy of God,", "rest in peace. Amen."],
     "Litany of Loreto": ["Kyrie eleison.", "Christe eleison.", "Kyrie eleison.", "", "Christe audi nos.", "Christe exaudi nos.", "", "Pater de coelis Deus, miserere nobis.", "Fili redemptor mundi Deus, miserere nobis.", "Spiritus Sancte Deus, miserere nobis.", "Sancta Trinitas unus Deus, miserere nobis.", "", "Sancta Maria, ora pro nobis.", "Sancta Dei Genetrix, ora pro nobis.", "Sancta Virgo Virginum, ora pro nobis", "", "Mater Christi, ora pro nobis.", "Mater Ecclesiae, ora pro nobis.", "Mater misericordiae, ora pro nobis.", "Mater Divinae Gratiae, ora pro nobis.", "Mater spei, ora pro nobis", "Mater purissima, ora pro nobis.", "Mater castissima, ora pro nobis.", "Mater inviolata, ora pro nobis.", "Mater intemerata, ora pro nobis.", "Mater amabilis, ora pro nobis.", "Mater admirabilis, ora pro nobis.", "Mater boni consilii, ora pro nobis.", "Mater Creatoris, ora pro nobis.", "Mater Salvatoris, ora pro nobis.", "", "Virgo prudentissima, ora pro nobis.", "Virgo veneranda, ora pro nobis.", "Virgo praedicanda, ora pro nobis.", "Virgo potens, ora pro nobis.", "Virgo clemens, ora pro nobis.", "Virgo fidelis, ora pro nobis.", "", "Speculum justitiae, ora pro nobis.", "Sedes sapientiae, ora pro nobis.", "Causa nostrae laetitiae, ora pro nobis.", "Vas spirituale, ora pro nobis.", "Vas honorabile, ora pro nobis.", "Vas insigne devotionis, ora pro nobis.", "Rosa mystica, ora pro nobis.", "Turris Davidica, ora pro nobis.", "Turris eburnea, ora pro nobis.", "Domus aurea, ora pro nobis.", "Foederis arca, ora pro nobis.", "Janua coeli, ora pro nobis.", "Stella matutina, ora pro nobis.", "Salus infirmorum, ora pro nobis.", "Refugium peccatorum, ora pro nobis.", "Solacium migrantium, ora pro nobis.", "Consolatrix afflictorum, ora pro nobis.", "Auxilium christianorum, ora pro nobis.", "", "Regina Angelorum, ora pro nobis.", "Regina Patriarcharum, ora pro nobis.", "Regina Prophetarum, ora pro nobis.", "Regina Apostolorum, ora pro nobis.", "Regina Martyrum, ora pro nobis.", "Regina Confessorum, ora pro nobis.", "Regina Virginum, ora pro nobis.", "Regina Sanctorum omnium, ora pro nobis.", "Regina sine labe originali concepta, ora pro nobis.", "Regina in caelum assumpta, ora pro nobis.", "Regina Sacratissimi Rosarii, ora pro nobis.", "Regina familiae, ora pro nobis.", "Regina pacis, ora pro nobis.", "", "Agnus Dei qui tollis peccata mundi, parce nobis Domine.", "Agnus Dei qui tollis peccata mundi, exaudi nos, Domine.", "Agnus Dei qui tollis peccata mundi, miserere nobis.", 
@@ -87,14 +107,6 @@ document.getElementById("mystery-3-title").innerText= `Third mystery: ${mysterie
 document.getElementById("mystery-4-title").innerText= `Fourth mystery: ${mysteries_titles[todays_mystery][3]}`;
 document.getElementById("mystery-5-title").innerText= `Fifth mystery: ${mysteries_titles[todays_mystery][4]}`;
 
-// Set Hail Mary
-
-var prayers_mary = document.getElementsByClassName("prayer_mary")
-
-for (var i=0; i<prayers_mary.length; i++) {
-    prayers_mary[i].innerText = "Hail Mary, full of grace...";
-};
-
 // Checkboxes
 
 check_boxes();
@@ -112,8 +124,10 @@ function check_boxes() {
 
             if (radios[i].value == "english") {
                 prayers = prayers_english
+                language = "english";
             } else if (radios[i].value == "latin") {
                 prayers = prayers_latin
+                language = "latin";
             }
         }
     };
@@ -122,12 +136,14 @@ function check_boxes() {
 
     // Opening prayers
 
-    opening_boxes = ["opening_cross", "opening_father", "opening_lips", "opening_glory"]
-    opening_prayers = ["Sign of the cross", "Our Father", "O Lord, Open My Lips", "Glory Be"]
+    opening_boxes = ["opening_cross", "opening_creed", "opening_father", "opening_lips", "opening_glory"]
+    opening_prayers = ["Sign of the cross", "The Apostle's Creed", "Our Father", "O Lord, Open My Lips", "Glory Be"]
 
     for (var i=0; i<opening_boxes.length; i++) {
 
         current_box = document.getElementById(opening_boxes[i])
+
+        console.log(current_box);
 
         if (current_box.checked == true) {
             document.getElementById(`prayer_${opening_boxes[i]}`).innerHTML = `<b>${opening_prayers[i]}</b> <br><br> ${prayers[opening_prayers[i]].join("<br>")}`;
@@ -172,7 +188,19 @@ function check_boxes() {
         document.getElementById("scripture-3").innerText = ""
         document.getElementById("scripture-4").innerText = ""
         document.getElementById("scripture-5").innerText = ""
-    }
+    };
+
+    // Additional readings
+
+    additional_box = document.getElementById("additional_readings");
+
+    if (additional_box.checked == true) {
+        document.getElementById("addition-1").innerHTML = "<b>Additional reading</b><br><br>" + additional_readings[todays_mystery][0];
+        document.getElementById("addition-2").innerHTML = "<b>Additional reading</b><br><br>" + additional_readings[todays_mystery][1];
+        document.getElementById("addition-3").innerHTML = "<b>Additional reading</b><br><br>" + additional_readings[todays_mystery][2];
+        document.getElementById("addition-4").innerHTML = "<b>Additional reading</b><br><br>" + additional_readings[todays_mystery][3];
+        document.getElementById("addition-5").innerHTML = "<b>Additional reading</b><br><br>" + additional_readings[todays_mystery][4];
+    };
 
     console.log("Done setting excerpts from scripture");
 
@@ -181,21 +209,29 @@ function check_boxes() {
     hail_box = document.getElementById("opening_mary");
 
     if (hail_box.checked == true) {
-        document.getElementById("mary_1").innerHTML = "<b>Trinitarian Hail Mary</b> <br> <br> Hail Mary, Daughter of God the Father, full of grace...";
-        document.getElementById("mary_2").innerHTML = "Hail Mary, Mother of God the Son, full of grace...";
-        document.getElementById("mary_3").innerHTML = "Hail Mary, Spouse of the Holy Ghost, full of grace...";
+
+        if (language == "latin") {
+            document.getElementById("mary_1").innerHTML = "<b>Trinitarian Hail Mary</b> <br> <br> Ave Maria, Filia Dei Patris, plena gratia...";
+            document.getElementById("mary_2").innerHTML = "Ave Maria, Mater Dei Filii, plena gratia...";
+            document.getElementById("mary_3").innerHTML = "Ave Maria, Sponsa Spiritus Sancti, plena gratia...";
+        } else if (language == "english") {
+            document.getElementById("mary_1").innerHTML = "<b>Trinitarian Hail Mary</b> <br> <br> Hail Mary, Daughter of God the Father, full of grace...";
+            document.getElementById("mary_2").innerHTML = "Hail Mary, Mother of God the Son, full of grace...";
+            document.getElementById("mary_3").innerHTML = "Hail Mary, Spouse of the Holy Ghost, full of grace...";
+        }
+
     } else {
-        document.getElementById("mary_1").innerHTML = "<b>Hail Mary</b> <br> <br> Hail Mary, full of grace...";
-        document.getElementById("mary_2").innerText = "Hail Mary, full of grace...";
-        document.getElementById("mary_3").innerText = "Hail Mary, full of grace...";
+
+        if (language == "latin") {for (var i=0; i<3; i++) { document.getElementsByClassName(`mary_` + str(i+1)).innerHTML = "Ave Maria, plena gratia..."; };}
+        else if (language == "english") {for (var i=0; i<3; i++) { document.getElementsByClassName(`mary_` + str(i+1)).innerHTML = "Hail Mary, full of grace..."; };}
     }
 
     
 
     // Other prayers
 
-    main_boxes = ["prayer_father", "prayer_glory", "prayer_fatima", "prayer_sacrament", "prayer_medal", "prayer_dead"];
-    main_prayers = ["Our Father", "Glory Be", "O my Jesus", "O Sacrament Most Holy", "Miraculous Medal Prayer", "Prayer for the dead"];
+    main_boxes = ["prayer_father", "prayer_glory", "prayer_mary", "prayer_fatima", "prayer_sacrament", "prayer_medal", "prayer_dead"];
+    main_prayers = ["Our Father", "Glory Be", "Hail Mary", "O my Jesus", "O Sacrament Most Holy", "Miraculous Medal Prayer", "Prayer for the dead"];
 
     for (var i=0; i<main_boxes.length; i++) {
 
@@ -219,6 +255,30 @@ function check_boxes() {
 
     };  
 
+    // Randomiser
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);   // round up
+        max = Math.floor(max);  // round down
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     console.log("Done setting main prayers");
-    
+
+    // Fill in the images
+
+    let images = {
+
+        "Joyful": [4,2,4,4,2],
+        "Glorious": [5,6,4,4,6]
+
+    }
+
+    console.log(todays_mystery);
+
+    console.log(`Images/${todays_mystery.split(" ")[0]}`)
+
+    for (var i=1; i<=5; i++) {
+        document.getElementById(`image_${i}`).src = `Images/${todays_mystery.split(" ")[0]}/${i}_${getRandomInt(1, images[todays_mystery.split(" ")[0]][i-1])}.jpg`;
+    }
 };
